@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Craigen - Musician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Toggle dropdown visibility
+        function toggleDropdown() {
+            const dropdown = document.getElementById("actsDropdown");
+            dropdown.classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-black text-yellow-500 font-sans">
+
+    <!-- Header -->
+    <header class="p-5 bg-black shadow-md fixed top-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Chris Craigen</h1>
+            <nav>
+                <ul class="flex space-x-8 items-center">
+                    <li><a href="#about" class="hover:text-yellow-300">About</a></li>
+                    <li class="relative">
+                        <button onclick="toggleDropdown()" class="hover:text-yellow-300">Acts</button>
+                        <ul id="actsDropdown" class="absolute bg-black border border-yellow-500 text-sm text-left hidden space-y-2 p-3 mt-2">
+                            <li><a href="#chris-craigen" class="block hover:text-yellow-300">Chris Craigen</a></li>
+                            <li><a href="#the-krakens" class="block hover:text-yellow-300">The Krakens</a></li>
+                            <li><a href="#casey-vox" class="block hover:text-yellow-300">Casey Vox</a></li>
+                            <li><a href="#aris" class="block hover:text-yellow-300">Aris</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#gallery" class="hover:text-yellow-300">Gallery</a></li>
+                    <li><a href="#events" class="hover:text-yellow-300">Events & Dates</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center bg-yellow-500 text-black">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to Chris Craigen's World</h2>
+        <p class="text-lg md:text-2xl">Musician, Composer, Performer</p>
+        <a href="#about" class="mt-6 px-6 py-3 bg-black text-yellow-500 rounded-md shadow-md hover:bg-yellow-700 hover:text-black">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black text-yellow-500">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">About Chris Craigen</h2>
+            <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                Chris Craigen is a renowned musician with a passion for creating unforgettable melodies. 
+                With a career spanning over a decade, Chris has captivated audiences worldwide with his dynamic performances and soulful compositions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Acts Section -->
+    <section id="acts" class="py-20 bg-yellow-500 text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Acts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div id="chris-craigen" class="p-6 bg-black text-yellow-500 rounded-md shadow-md">
+                    <h3 class="text-2xl font-semibold mb-3">Chris Craigen</h3>
+                    <p>A solo experience of heartfelt music and storytelling.</p>
+                </div>
+                <div id="the-krakens" class="p-6 bg-black text-yellow-500 rounded-md shadow-md">
+                    <h3 class="text-2xl font-semibold mb-3">The Krakens</h3>
+                    <p>A high-energy rock band known for electrifying performances.</p>
+                </div>
+                <div id="casey-vox" class="p-6 bg-black text-yellow-500 rounded-md shadow-md">
+                    <h3 class="text-2xl font-semibold mb-3">Casey Vox</h3>
+                    <p>Collaborating on intimate acoustic sessions with Casey.</p>
+                </div>
+                <div id="aris" class="p-6 bg-black text-yellow-500 rounded-md shadow-md">
+                    <h3 class="text-2xl font-semibold mb-3">Aris</h3>
+                    <p>Exploring a unique fusion of genres with Aris.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-black text-yellow-500">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Gallery</h2>
+            <p class="text-lg md:text-xl leading-relaxed">Explore photos and videos from past performances and behind the scenes.</p>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-yellow-500 text-black">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Events & Dates</h2>
+            <p class="text-lg md:text-xl leading-relaxed">Stay updated on Chris Craigen's upcoming shows and tours.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black text-yellow-500">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Contact</h2>
+            <p class="text-lg md:text-xl leading-relaxed max-w-xl mx-auto">
+                For booking inquiries, collaborations, or to say hello, feel free to get in touch!
+            </p>
+            <a href="mailto:info@chriscraigen.com" class="mt-6 px-6 py-3 bg-yellow-500 text-black rounded-md shadow-md hover:bg-yellow-700 hover:text-yellow-300">Email Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-black text-center text-yellow-500">
+        <p>&copy; 2024 Chris Craigen. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
