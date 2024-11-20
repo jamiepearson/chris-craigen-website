@@ -2,12 +2,12 @@ schema:
   collections:
     - name: pages
       label: Pages
-      path: "" # Root directory
-      format: md
+      path: "index.html" # Root directory
+      format: html
       fields:
         - name: title
           label: Title
           type: string
         - name: body
           label: Body
-          type: markdown
+          type: string # Use string for HTML content
