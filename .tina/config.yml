@@ -1,0 +1,13 @@
+schema:
+  collections:
+    - name: pages
+      label: Pages
+      path: "" # Root directory
+      format: md
+      fields:
+        - name: title
+          label: Title
+          type: string
+        - name: body
+          label: Body
+          type: markdown
