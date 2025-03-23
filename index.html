@@ -119,20 +119,20 @@
   <div class="container">
     <h1>Contact</h1>
     <div class="block"></div>
-    <form>
+      <form action="send_email.php" method="POST">
       <div class="row">
         <div class="six columns">
-          <label for="exampleRecipientInput">Name</label>
-          <input class="u-full-width" type="text">
+          <label for="name">Name</label>
+          <input class="u-full-width" type="text" id="name" name="name" required>
         </div>
         <div class="six columns">
-          <label for="exampleEmailInput">Email</label>
-          <input class="u-full-width" type="email">
+          <label for="email">Email</label>
+          <input class="u-full-width" type="email" id="email" name="email" required>
         </div>
       </div>
       <div class="row">
-        <label for="exampleMessage">Message</label>
-        <textarea class="u-full-width"></textarea>
+        <label for="message">Message</label>
+        <textarea class="u-full-width" id="message" name="message" required></textarea>
         <input class="button-primary" type="submit" value="Submit">
       </div>
     </form>
