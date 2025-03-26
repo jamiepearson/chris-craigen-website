@@ -661,6 +661,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .icon {
 	padding-right: 10px;
 	color: #e55d87;
+	font-size: 48px;
 }
 .block {
 	width: 70px;
