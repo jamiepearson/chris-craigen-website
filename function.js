@@ -62,5 +62,68 @@ jQuery(document).ready(function($) {
   
 });
 
+/*----------------------------------------------------*/
+/* Gallery
+------------------------------------------------------ */
 
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryImages = [
+    "https://github.com/jamiepearson/chris-craigen-website/blob/master/assets/media/Solo/Solo%202.jpg?raw=true",
+    "https://github.com/jamiepearson/chris-craigen-website/blob/master/assets/media/Krakens/Krakens%20Cover%20Photo.jpg?raw=true",
+    "https://github.com/jamiepearson/chris-craigen-website/blob/master/assets/media/Casey%20Vox/casey%20vox-11.jpg?raw=true",
+    "https://github.com/jamiepearson/chris-craigen-website/blob/master/assets/media/aris/aris.jpeg?raw=true"
+  ];
+
+  let currentIndex = 0;
+
+  // Open modal and display the clicked image
+  window.openModal = (index) => {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    currentIndex = index;
+    modalImage.src = galleryImages[currentIndex];
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+  };
+
+  // Close modal
+  window.closeModal = () => {
+    const modal = document.getElementById("imageModal");
+    modal.classList.add("hidden");
+    document.body.style.overflow = ""; // Restore scrolling
+  };
+
+  // Close modal by clicking outside the image
+  window.clickOutsideModal = (event) => {
+    const modalImage = document.getElementById("modalImage");
+    if (!modalImage.contains(event.target)) {
+      closeModal();
+    }
+  };
+
+  // Navigate to the next image
+  window.nextImage = () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    document.getElementById("modalImage").src = galleryImages[currentIndex];
+  };
+
+  // Navigate to the previous image
+  window.prevImage = () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    document.getElementById("modalImage").src = galleryImages[currentIndex];
+  };
+
+  // Close modal using ESC key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    } else if (event.key === "ArrowRight") {
+      nextImage();
+    } else if (event.key === "ArrowLeft") {
+      prevImage();
+    }
+  });
+});
+
+  
 TweenMax.staggerFrom(".heading", 0.8, {opacity: 0, y: 20, delay: 0.2}, 0.4);
