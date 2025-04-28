@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeVideoModal = document.getElementById("closeVideoModal");
   const videoButton = document.getElementById("videoBtn");
   const youtubeVideo = document.getElementById("youtubeVideo");
-  const videoSrc = "https://www.youtube.com/embed/rG4xaEqA6I0?autoplay=1&mute=1"; // Autoplay & muted
   
-  // Open modal and start video
+  // Open modal and start video with sound
   videoButton.addEventListener("click", () => {
-    youtubeVideo.src = videoSrc; // Assign the autoplay-enabled URL
+    youtubeVideo.src = "https://www.youtube.com/embed/rG4xaEqA6I0?autoplay=1"; // Removed 'mute=1'
     videoModal.classList.remove("hidden");
     document.body.style.overflow = "hidden"; // Prevent scrolling
   });
