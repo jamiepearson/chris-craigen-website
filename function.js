@@ -1,4 +1,16 @@
 /*----------------------------------------------------*/
+/* Showreel modal
+------------------------------------------------------ */
+
+document.getElementById("videoBtn").addEventListener("click", function() {
+  document.getElementById("videoModal").classList.remove("hidden");
+});
+
+document.getElementById("closeModal").addEventListener("click", function() {
+  document.getElementById("videoModal").classList.add("hidden");
+});
+
+/*----------------------------------------------------*/
 /* Quote Loop
 ------------------------------------------------------ */
 
