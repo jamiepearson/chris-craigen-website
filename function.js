@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const videoModal = document.getElementById("videoModal");
   const closeVideoModal = document.getElementById("closeVideoModal");
   const videoButton = document.getElementById("videoBtn");
-
-  // Open modal when button is clicked
+  const youtubeVideo = document.getElementById("youtubeVideo");
+  
+  // Open modal and start video
   videoButton.addEventListener("click", () => {
+    youtubeVideo.src = "https://www.youtube.com/embed/rG4xaEqA6I0?autoplay=1"; // Add autoplay
     videoModal.classList.remove("hidden");
     document.body.style.overflow = "hidden"; // Prevent scrolling
   });
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeVideoModal.addEventListener("click", () => {
     videoModal.classList.add("hidden");
     document.body.style.overflow = ""; // Restore scrolling
+    youtubeVideo.src = ""; // Reset src to stop video playback
   });
 
   // Close modal using the ESC key
