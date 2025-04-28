@@ -553,6 +553,11 @@ opacity: 0;
 	width: 100%;
 }
 
+.videoBtn {
+	background-color: #EDC302;
+	color: #fff;
+}
+
 /* Events Section
 ********************************************************************* */
 #events {
