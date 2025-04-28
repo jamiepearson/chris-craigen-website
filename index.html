@@ -31,19 +31,40 @@
       </nav>
     </div>
   </div>
+  
   <div class="title">
     <div><span class="typcn typcn-notes-outline icon"></span></div>
     <div class="smallsep heading"></div>
-    <h1 class="heading"> Chris Craigen</h1>
-    <h2 class="heading">Piano Player and Singer. Available for gigs and events. </h2>
+    <h1 class="heading">Chris Craigen</h1>
+    <h2 class="heading">Piano Player and Singer. Available for gigs and events.</h2>
+
+    <!-- Button to open YouTube modal -->
+    <button id="videoBtn"
+            class="mx-auto mt-4 px-6 py-3 text-white font-semibold rounded-lg hover:bg-red-700 flex items-center justify-center cursor-pointer">
+      Watch the Showreel
+      <span class="typcn typcn-social-youtube-circular text-2xl ml-2"></span>
+    </button>
+    
     <a class="smoothscroll" href="#about">
-    <div class="mouse">
-      <div class="wheel"></div>
-    </div>
-    </a> </div>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </a>
+  </div>
+  
   <a class="smoothscroll" href="#about">
-  <div class="scroll-down"></div>
-  </a> </header>
+    <div class="scroll-down"></div>
+  </a>
+
+  <!-- Modal for YouTube Video -->
+  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+      <button id="closeModal" class="absolute top-4 right-4 text-2xl text-gray-800 hover:text-black">&times;</button>
+      <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/embed/rG4xaEqA6I0" 
+              frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</header>
   
 <!-- About Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
