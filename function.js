@@ -1,13 +1,37 @@
 /*----------------------------------------------------*/
-/* Showreel modal
+/* YouTube Video Modal
 ------------------------------------------------------ */
 
-document.getElementById("videoBtn").addEventListener("click", function() {
-  document.getElementById("videoModal").classList.remove("hidden");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const videoModal = document.getElementById("videoModal");
+  const closeVideoModal = document.getElementById("closeVideoModal");
+  const videoButton = document.getElementById("videoBtn");
 
-document.getElementById("closeModal").addEventListener("click", function() {
-  document.getElementById("videoModal").classList.add("hidden");
+  // Open modal when button is clicked
+  videoButton.addEventListener("click", () => {
+    videoModal.classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+  });
+
+  // Close modal when clicking outside the iframe
+  videoModal.addEventListener("click", (event) => {
+    if (!event.target.closest("iframe")) {
+      closeVideoModal.click();
+    }
+  });
+
+  // Close modal when '×' is clicked
+  closeVideoModal.addEventListener("click", () => {
+    videoModal.classList.add("hidden");
+    document.body.style.overflow = ""; // Restore scrolling
+  });
+
+  // Close modal using the ESC key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeVideoModal.click();
+    }
+  });
 });
 
 /*----------------------------------------------------*/
