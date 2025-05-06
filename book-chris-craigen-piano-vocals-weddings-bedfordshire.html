@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Chris Craigen – Wedding & Event Singer & Pianist in Bedfordshire</title>
+    <meta name="description" content="Book Chris Craigen, a professional wedding and event singer & pianist in Bedfordshire. With elegant live piano and vocal performances, Chris brings unforgettable music to weddings, private parties, and corporate events. Secure your booking today!">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Ctext x='0' y='20' font-size='20'%3E🎵%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <script src="function.js" defer></script>
+    </head>
+<body>
+<!-- Header Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<header id="header">
+  <div class="main_nav">
+    <div class="container">
+      <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+      <nav>
+        <ul>
+          <li><a class="smoothscroll" href="#header">Home</a></li>
+          <li><a class="smoothscroll" href="#about">About</a></li>
+          <li><a class="smoothscroll" href="#acts">Acts</a></li>
+          <li><a class="smoothscroll" href="#events">Events</a></li>
+          <li><a class="smoothscroll" href="#gallery">Gallery</a></li>
+          <li><a class="smoothscroll" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <div class="title">
+    <div><span class="typcn typcn-notes-outline icon"></span></div>
+    <div class="smallsep heading"></div>
+    <h1 class="heading">Chris Craigen</h1>
+    <h2 class="heading">Professional Pianist & Singer for Weddings & Events</h2>
+
+    <!-- Button to open YouTube modal -->
+    <button id="videoBtn"
+            class="mx-auto mt-4 px-6 py-3 text-white font-semibold rounded-lg hover:bg-red-700 flex items-center justify-center cursor-pointer">
+      Watch Showreel
+      <span class="typcn typcn-social-youtube-circular text-2xl ml-2"></span>
+    </button>
+    
+    <a class="smoothscroll" href="#about">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </a>
+  </div>
+  
+  <a class="smoothscroll" href="#about">
+    <div class="scroll-down"></div>
+  </a>
+
+    <!-- Modal for YouTube Video -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-lg relative">
+    <button id="closeVideoModal" class="absolute top-1 right-2 text-2xl text-gray-800 hover:text-black">&times;</button>
+    <iframe id="youtubeVideo" width="560" height="315" 
+            src="https://www.youtube.com/embed/rG4xaEqA6I0" 
+            frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+</header>
+  
+<!-- About Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+  
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <h2>About</h2>
+      <div class="block"></div>
+      <p>Chris Craigen is a talented Bedford-based singer and pianist, specialising in delivering exceptional live music for weddings, private events, and corporate functions. Whether it's romantic piano melodies for a wedding ceremony or captivating vocals for an evening reception, Chris crafts the perfect soundtrack to elevate any occasion.</p>
+      <p>With extensive experience performing on international stages and for local Bedfordshire audiences, Chris brings versatility, professionalism, and a personal touch to every performance. If you're planning an intimate gathering or a large-scale event, Chris Craigen's passion for music ensures a memorable experience for you and your guests.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+
+<section id="contact">
+  <div class="container">
+    <h1>Contact</h1>
+    <div class="block"></div>
+     <form action="https://formspree.io/f/xdkgaloe" method="POST">
+      <div class="row">
+        <div class="six columns">
+          <label for="name">Name</label>
+          <input class="u-full-width" type="text" id="name" name="name" required>
+        </div>
+        <div class="six columns">
+          <label for="email">Email</label>
+          <input class="u-full-width" type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <label for="message">Message</label>
+        <textarea class="u-full-width" id="message" name="message" required></textarea>
+        <input class="button-primary" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+
+<footer>
+  <div class="container">
+    <div class="nine columns">
+      <p>Created with love by <a id="footer-link" href="https://github.com/jamiepearson">Jamie</a></p>
+
+    </div>
+    <div class="three columns"> 
+      <a href="https://www.facebook.com/profile.php?id=61550980492849" aria-label="Facebook"><span class="typcn typcn-social-facebook-circular socialIcons"></span></a> 
+      <a href="https://www.instagram.com/chris_craigen_music/" aria-label="Instagram"><span class="typcn typcn-social-instagram-circular socialIcons"></span></a>
+            <a href="https://www.youtube.com/@chriscraigenmusic" aria-label="YouTube"><span class="typcn typcn-social-youtube-circular socialIcons"></span></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
