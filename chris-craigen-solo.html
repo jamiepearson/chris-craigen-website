@@ -14,20 +14,15 @@
     <!-- Header Section (Matching Homepage Design) -->
     <header>
         <div class="title">
-            <div><span class="typcn typcn-notes-outline icon"></span></div>
-            <div class="smallsep heading"></div>
             <h1 class="heading">Chris Craigen</h1>
             <h2 class="heading">Professional Pianist & Singer for Weddings & Events</h2>
-            <a id="videoBtn" class="smoothscroll">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </a>
+            <div class="smallsep heading"></div>
+            <a id="videoBtn" class="smoothscroll">Watch Showreel</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="py-10 px-6 max-w-4xl mx-auto text-center">
+    <section>
         <h2 class="heading">Why Book Chris Craigen?</h2>
         <p>Chris Craigen is a highly sought-after pianist and vocalist, specializing in live performances for weddings, private parties, corporate functions, and exclusive events.</p>
         <ul>
@@ -39,98 +34,43 @@
     </section>
 
     <!-- Music & Video Showcase -->
-    <section class="py-10 px-6 bg-gray-800">
-        <h2 class="heading text-center">Listen to Chris Perform</h2>
-        <div class="mt-6 flex flex-col md:flex-row gap-6 justify-center">
-            <iframe class="rounded-lg w-full md:w-1/2 h-60" src="https://open.spotify.com/embed/YOUR_SPOTIFY_URL" allow="encrypted-media"></iframe>
-            <iframe class="rounded-lg w-full md:w-1/2 h-60" src="https://www.youtube.com/embed/rG4xaEqA6I0" frameborder="0" allowfullscreen></iframe>
+    <section class="bg-gray-800">
+        <h2 class="heading">Listen to Chris Perform</h2>
+        <div>
+            <iframe src="https://open.spotify.com/embed/YOUR_SPOTIFY_URL" allow="encrypted-media"></iframe>
+            <iframe src="https://www.youtube.com/embed/rG4xaEqA6I0" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
     <!-- Booking Section -->
-    <section class="py-10 px-6 max-w-4xl mx-auto text-center">
+    <section>
         <h2 class="heading">Get a Personalized Quote for Your Event</h2>
         <p>Interested in booking Chris for your **wedding, corporate event, or private party**? Fill out the form below to receive a custom quote.</p>
         
-        <!-- Booking Form -->
-        <form class="mt-6 max-w-lg mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <form>
             <label>Your Name:</label>
-            <input type="text" class="w-full p-3 rounded-lg bg-gray-700 text-white" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your name" required>
 
             <label>Email Address:</label>
-            <input type="email" class="w-full p-3 rounded-lg bg-gray-700 text-white" placeholder="Enter your email" required>
+            <input type="email" placeholder="Enter your email" required>
 
             <label>Event Details:</label>
-            <textarea class="w-full p-3 rounded-lg bg-gray-700 text-white" placeholder="Tell us about your event..." required></textarea>
+            <textarea placeholder="Tell us about your event..." required></textarea>
 
-            <button type="submit" class="mt-6 w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">
-                Get a Quote
-            </button>
+            <button type="submit">Get a Quote</button>
         </form>
     </section>
 
     <!-- Social Media -->
-    <section class="py-10 px-6 bg-gray-800 text-center">
+    <section class="bg-gray-800">
         <h2 class="heading">Follow Chris Online</h2>
-        <div class="flex flex-col md:flex-row gap-4 justify-center w-full mt-6">
-            <a href="https://www.facebook.com/profile.php?id=61550980492849" aria-label="Facebook"
-               class="flex items-center justify-center w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">
-                Follow on Facebook
-                <span class="typcn typcn-social-facebook-circular text-2xl ml-2"></span>
-            </a>
-            <a href="https://www.instagram.com/chris_craigen_music/" aria-label="Instagram"
-               class="flex items-center justify-center w-full md:w-auto px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700">
-                Follow on Instagram
-                <span class="typcn typcn-social-instagram-circular text-2xl ml-2"></span>
-            </a>
-            <a href="https://www.youtube.com/@chriscraigenmusic" aria-label="YouTube"
-               class="flex items-center justify-center w-full md:w-auto px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700">
-                Subscribe on YouTube
-                <span class="typcn typcn-social-youtube-circular text-2xl ml-2"></span>
-            </a>
+        <div>
+            <a href="https://www.facebook.com/profile.php?id=61550980492849">Follow on Facebook</a>
+            <a href="https://www.instagram.com/chris_craigen_music/">Follow on Instagram</a>
+            <a href="https://www.youtube.com/@chriscraigenmusic">Subscribe on YouTube</a>
         </div>
     </section>
 
     <!-- Video Modal -->
-    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
-            <button id="closeVideoModal" class="absolute top-4 right-4 text-2xl text-gray-800 hover:text-black">&times;</button>
-            <iframe id="youtubeVideo" width="560" height="315"
-                    src="https://www.youtube.com/embed/rG4xaEqA6I0"
-                    frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- JavaScript for Modal -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const videoModal = document.getElementById("videoModal");
-            const closeVideoModal = document.getElementById("closeVideoModal");
-            const videoButton = document.getElementById("videoBtn");
-
-            videoButton.addEventListener("click", () => {
-                videoModal.classList.remove("hidden");
-                document.body.style.overflow = "hidden";
-            });
-
-            videoModal.addEventListener("click", (event) => {
-                if (!event.target.closest("iframe")) {
-                    closeVideoModal.click();
-                }
-            });
-
-            closeVideoModal.addEventListener("click", () => {
-                videoModal.classList.add("hidden");
-                document.body.style.overflow = "";
-            });
-
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "Escape") {
-                    closeVideoModal.click();
-                }
-            });
-        });
-    </script>
-
-</body>
-</html>
+    <div id="videoModal">
+        <button id="closeVideoModal">&times;</button
