@@ -73,4 +73,34 @@
 
     <!-- Video Modal -->
     <div id="videoModal">
-        <button id="closeVideoModal">&times;</button
+        <button id="closeVideoModal">&times;</button>
+        <iframe id="youtubeVideo" src="https://www.youtube.com/embed/rG4xaEqA6I0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const videoModal = document.getElementById("videoModal");
+            const closeVideoModal = document.getElementById("closeVideoModal");
+            const videoButton = document.getElementById("videoBtn");
+
+            videoButton.addEventListener("click", () => {
+                videoModal.style.display = "block";
+                document.body.style.overflow = "hidden";
+            });
+
+            closeVideoModal.addEventListener("click", () => {
+                videoModal.style.display = "none";
+                document.body.style.overflow = "";
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    closeVideoModal.click();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
