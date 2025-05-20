@@ -1,4 +1,28 @@
 /*----------------------------------------------------*/
+/* Smooth Scrolling
+------------------------------------------------------*/
+
+jQuery(document).ready(function($) {
+   $('.smoothscroll').on('click', function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        // Check if target exists before accessing its properties
+        if ($target.length) {
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 800, 'swing', function () {
+                window.location.hash = target;
+            });
+        } else {
+            console.error("Smooth Scroll Error: Target element '" + target + "' not found.");
+        }
+    });
+});
+
+/*----------------------------------------------------*/
 /* YouTube Video Modal
 ------------------------------------------------------ */
 
@@ -78,31 +102,6 @@ $('.main_nav li a').click(function() {
         $('.main_nav').removeClass('open-nav');
     }
 });
-
-/*----------------------------------------------------*/
-/* Smooth Scrolling
-------------------------------------------------------*/
-
-jQuery(document).ready(function($) {
-   $('.smoothscroll').on('click', function (e) {
-        e.preventDefault();
-
-        var target = this.hash,
-        $target = $(target);
-
-        // Check if target exists before accessing its properties
-        if ($target.length) {
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, 800, 'swing', function () {
-                window.location.hash = target;
-            });
-        } else {
-            console.error("Smooth Scroll Error: Target element '" + target + "' not found.");
-        }
-    });
-});
-
 
 /*----------------------------------------------------*/
 /* Gallery
