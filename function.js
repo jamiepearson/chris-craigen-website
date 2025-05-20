@@ -22,6 +22,16 @@ jQuery(document).ready(function($) {
     });
 });
 
+/* Apply bg image */
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("header");
+    const bgImage = header.getAttribute("data-bg");
+
+    if (bgImage) {
+        header.style.backgroundImage = `url('${bgImage}')`;
+    }
+});
+
 /*----------------------------------------------------*/
 /* YouTube Video Modal
 ------------------------------------------------------ */
