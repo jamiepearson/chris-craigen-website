@@ -231,11 +231,12 @@ header {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
- width: 100%;
+ 	width: 100%;
 	height: 100vh;
-  background-image:url("https://raw.githubusercontent.com/jamiepearson/chris-craigen-website/refs/heads/master/assets/media/Solo/Solo%202.jpg");
-   background-size: cover;
-background-repeat: no-repeat;
+  	background-image:url("https://raw.githubusercontent.com/jamiepearson/chris-craigen-website/refs/heads/master/assets/media/Solo/Solo%202.jpg");
+   	background-size: cover;
+	background-repeat: no-repeat;
+	background: center;
 }
 
 .title {
