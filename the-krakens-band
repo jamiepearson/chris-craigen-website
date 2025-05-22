@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Krakens</title>
+    <meta name="description" content=""The Krakens are a high-energy four-piece rock covers band delivering electrifying performances of classic and modern rock hits. From Queen and Elton John to Nirvana and Green Day, their dynamic setlist guarantees an unforgettable live music experience. Book The Krakens for your next event!">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Ctext x='0' y='20' font-size='20'%3E🎵%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <script src="function.js" defer></script>
+    </head>
+<body>
+<!-- Header Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section>
+<div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-20 mx-20"><div><h1 class="">The Krakens</h1>
+<h2>High-Energy Rock Covers Band</h2> <div class="pt-5 pb-5 text-gray-500">  
+  
+  <p style="text-align: left;">The Krakens are a high-energy, four-piece rock covers band that brings the best of classic and modern rock hits to the stage. With a wide range of influences, The Krakens’ setlist spans from iconic anthems by Queen and Elton John to grunge classics from Nirvana, pop-punk hits by Green Day, and timeless tunes from the Goo Goo Dolls.
+
+The band is made up of four passionate musicians who each bring their own unique sound and energy:
+
+</p>  <ul>
+        <li><strong>Chris on keys and vocals, adding a dynamic flair with his powerful voice and expert piano skills.</strong></li>
+        <li><strong>Jon, the guitarist, delivering both raw power and intricate solos that breathe life into every song.</strong></li>
+        <li><strong>Naomi on bass, anchoring the band's rhythm with groove-driven basslines and infectious energy.</strong></li>
+        <li><strong>Seb on drums, providing the pulse that keeps the music moving with precision and intensity.</strong></li>
+        </ul></div></div> <div><img src="/assets/media/Krakens/Krakens%20Cover%20Photo.jpg" alt="The Krakens rock band members" height="500" width="500" class="mx-auto"></div></div>
+    <div class="main_nav sticky">
+    <div class="container">
+      <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+      <nav>
+        <ul>
+         <li><a class="heading-link" href="/index.html">Home</a></li>
+        <li><a class="heading-link" href="/index.html#about">About</a></li>
+        <li><a class="heading-link" href="/index.html#acts">Acts</a></li>
+        <li><a class="heading-link" href="/index.html#events">Events</a></li>
+        <li><a class="heading-link" href="/index.html#gallery">Gallery</a></li>
+        <li><a class="heading-link" href="/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- About Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+  
+<section class="pt-6">
+  <div class="container">
+    <div class="row">
+
+     <h2>Live Setlist</h2>
+        
+    <div class="setlist-container">
+        
+        <!-- Singing Section -->
+<div class="setlist-section grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Column 1: Singing Performances -->
+    <div>
+        <h3 class="text-xl font-bold mb-4">🎤 Singing Performances</h3>
+        <ul class="song-list space-y-2">
+            <li>Sweet Emotion – Aerosmith</li>
+            <li>Blackbird – Alter Bridge</li>
+            <li>Valerie – Amy Winehouse</li>
+            <li>Back to Black – Amy Winehouse</li>
+            <li>Like a Stone – Audioslave</li>
+            <li>Bed of Roses – Bon Jovi</li>
+            <li>Summer of '69 – Bryan Adams</li>
+            <li>Run to You – Bryan Adams</li>
+            <li>My Favourite Game – Cardigans</li>
+            <li>Accidentally in Love – Counting Crows</li>
+            <li>Zombie – Cranberries</li>
+            <li>Starman – David Bowie</li>
+            <li>Rocketman – Elton John</li>
+            <li>Crocodile Rock – Elton John</li>
+        </ul>
+    </div>
+
+    <!-- Column 2: Piano & Vocals -->
+    <div>
+        <h3 class="text-xl font-bold mb-4">🎹 Piano & Vocals</h3>
+        <ul class="song-list space-y-2">
+            <li>A Little Respect – Erasure</li>
+            <li>My Immortal – Evanescence</li>
+            <li>Bring Me to Life – Evanescence</li>
+            <li>Sugar, We're Going Down – Fall Out Boy</li>
+            <li>Times Like These – Foo Fighters</li>
+            <li>Building – Funeral For a Friend</li>
+            <li>Black Balloon – Goo Goo Dolls</li>
+            <li>Iris – Goo Goo Dolls</li>
+            <li>Holiday – Green Day</li>
+            <li>Boulevard of Broken Dreams – Green Day</li>
+            <li>Never Tear Us Apart – INXS</li>
+            <li>Don't Stop Believin' – Journey</li>
+            <li>Ruby – Kaiser Chiefs</li>
+            <li>Sex on Fire – Kings of Leon</li>
+        </ul>
+    </div>
+</div>
+
+    </div>
+
+    <a href="https://docs.google.com/spreadsheets/d/123t3ZliccW-_vB320VLBFNuqAzS2sAYudZ96EAGnQAM/edit?usp=sharing" target="_blank" class="button-primary" aria-label="Download copy of the setlist.">Download a copy of the setlist</a>
+    <p>Looking for something special? The Krakens take **custom song requests** to make your wedding or private event truly unique! 🎶✨</p>
+        
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+
+<section id="contact">
+  <div class="container">
+    <h1>Contact</h1>
+    <div class="block"></div>
+     <form action="https://formspree.io/f/xdkgaloe" method="POST">
+      <div class="row">
+        <div class="six columns">
+          <label for="name">Name</label>
+          <input class="u-full-width" type="text" id="name" name="name" required>
+        </div>
+        <div class="six columns">
+          <label for="email">Email</label>
+          <input class="u-full-width" type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <label for="message">Message</label>
+        <textarea class="u-full-width" id="message" name="message" required></textarea>
+        <input class="button-primary" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+
+<footer>
+  <div class="container">
+    <div class="nine columns">
+      <p>Created with love by <a id="footer-link" href="https://github.com/jamiepearson">Jamie</a></p>
+
+    </div>
+    <div class="three columns"> 
+      <a href="https://www.facebook.com/profile.php?id=61550980492849" aria-label="Facebook"><span class="typcn typcn-social-facebook-circular socialIcons"></span></a> 
+      <a href="https://www.instagram.com/chris_craigen_music/" aria-label="Instagram"><span class="typcn typcn-social-instagram-circular socialIcons"></span></a>
+            <a href="https://www.youtube.com/@chriscraigenmusic" aria-label="YouTube"><span class="typcn typcn-social-youtube-circular socialIcons"></span></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
