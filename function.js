@@ -41,12 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeVideoModal = document.getElementById("closeVideoModal");
   const videoButton = document.getElementById("videoBtn");
   const youtubeVideo = document.getElementById("youtubeVideo");
-  
-  // Open modal and start video with sound
+
+  // Store the original src from the iframe
+  const originalSrc = youtubeVideo.getAttribute("src");
+
+  // Open modal and autoplay video
   videoButton.addEventListener("click", () => {
-    youtubeVideo.src = "https://www.youtube.com/embed/rG4xaEqA6I0?autoplay=1"; // Removed 'mute=1'
+    const autoplaySrc = updateYouTubeURLWithAutoplay(originalSrc);
+    youtubeVideo.src = autoplaySrc;
     videoModal.classList.remove("hidden");
-    document.body.style.overflow = "hidden"; // Prevent scrolling
+    document.body.style.overflow = "hidden";
   });
 
   // Close modal when clicking outside the iframe
@@ -59,8 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Close modal when '×' is clicked
   closeVideoModal.addEventListener("click", () => {
     videoModal.classList.add("hidden");
-    document.body.style.overflow = ""; // Restore scrolling
-    youtubeVideo.src = ""; // Reset src to stop video playback
+    document.body.style.overflow = "";
+    youtubeVideo.src = ""; // Stop video
+    youtubeVideo.src = originalSrc; // Reset to original
   });
 
   // Close modal using the ESC key
@@ -69,6 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
       closeVideoModal.click();
     }
   });
+
+  // Helper function to add autoplay=1 to the URL
+  function updateYouTubeURLWithAutoplay(url) {
+    let newUrl = url;
+    if (url.includes("youtube.com") || url.includes("youtu.be")) {
+      const urlObj = new URL(url.includes("http") ? url : `https://${url}`);
+      if (!urlObj.searchParams.has("autoplay")) {
+        urlObj.searchParams.set("autoplay", "1");
+      }
+      newUrl = urlObj.toString();
+    }
+    return newUrl;
+  }
 });
 
 /*----------------------------------------------------*/
