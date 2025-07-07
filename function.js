@@ -39,23 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const videoModal = document.getElementById("videoModal");
   const closeVideoModal = document.getElementById("closeVideoModal");
-  const videoButton = document.getElementById("videoBtn");
   const youtubeVideo = document.getElementById("youtubeVideo");
+  const videoButtons = document.querySelectorAll(".videoBtn");
 
-  // Store the original src from the iframe
-  const originalSrc = youtubeVideo.getAttribute("src");
-
-  // Open modal and autoplay video
-  videoButton.addEventListener("click", () => {
-    const autoplaySrc = updateYouTubeURLWithAutoplay(originalSrc);
-    youtubeVideo.src = autoplaySrc;
-    videoModal.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
+  // Open modal with the correct video
+  videoButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const videoURL = button.getAttribute("data-video");
+      youtubeVideo.src = `${videoURL}?autoplay=1`;
+      videoModal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    });
   });
 
   // Close modal when clicking outside the iframe
   videoModal.addEventListener("click", (event) => {
-    if (!event.target.closest("iframe")) {
+    if (!event.target.closest("iframe") && !event.target.closest("button")) {
       closeVideoModal.click();
     }
   });
@@ -65,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     videoModal.classList.add("hidden");
     document.body.style.overflow = "";
     youtubeVideo.src = ""; // Stop video
-    youtubeVideo.src = originalSrc; // Reset to original
   });
 
   // Close modal using the ESC key
@@ -74,19 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
       closeVideoModal.click();
     }
   });
-
-  // Helper function to add autoplay=1 to the URL
-  function updateYouTubeURLWithAutoplay(url) {
-    let newUrl = url;
-    if (url.includes("youtube.com") || url.includes("youtu.be")) {
-      const urlObj = new URL(url.includes("http") ? url : `https://${url}`);
-      if (!urlObj.searchParams.has("autoplay")) {
-        urlObj.searchParams.set("autoplay", "1");
-      }
-      newUrl = urlObj.toString();
-    }
-    return newUrl;
-  }
 });
 
 /*----------------------------------------------------*/
