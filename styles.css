@@ -562,6 +562,7 @@ opacity: 0;
 #videoBtn {
 	background-color: #EDC302;
 	color: #fff;
+	text-shadown: 1px 1px 1px #000
 }
 
 /* Events Section
