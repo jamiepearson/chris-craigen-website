@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="function.js" defer></script>
     </head>
+
+     <!-- Modal for YouTube Video -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-lg relative">
+    <button id="closeVideoModal" class="absolute top-1 right-2 text-2xl text-gray-800 hover:text-black">&times;</button>
+    <iframe id="youtubeVideo" width="560" height="315" 
+            src="https://www.youtube.com/embed/fiWYnh3SZiM" 
+            frameborder="0" allowfullscreen></iframe>
+  </div>
+    
 <body>
 <!-- Header Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,7 +43,11 @@ The band is made up of four passionate musicians who each bring their own unique
         <li><strong>Jon (Guitar) – Raw power and intricate solos that bring every song to life.</strong></li>
         <li><strong>Naomi (Bass) – Groove-driven basslines that lock in the rhythm with infectious energy.</strong></li>
         <li><strong>Seb (Drums) – Precision and intensity, keeping the music flowing effortlessly.</strong></li>
-        </ul></div></div> <div><img src="/assets/media/Krakens/Krakens%20Cover%20Photo.jpg" alt="The Krakens rock band members" height="500" width="500" class="mx-auto"></div></div>
+        </ul></div></div> <div><img src="/assets/media/Krakens/Krakens%20Cover%20Photo.jpg" alt="The Krakens rock band members" height="500" width="500" class="mx-auto">  <button id="videoBtn"
+            class="mx-auto mt-4 px-6 py-3 text-white font-semibold rounded-lg hover:bg-red-700 flex items-center justify-center cursor-pointer">
+      Watch Showreel
+      <span class="typcn typcn-social-youtube-circular text-2xl ml-2"></span>
+    </button></div></div>
     <div class="main_nav sticky">
     <div class="container">
       <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
