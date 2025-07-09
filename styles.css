@@ -477,6 +477,10 @@ opacity: 0;
 /* Gallery Section
 ********************************************************************* */
 
+#gallery {
+	padding: 50px 0 100px 0;
+}
+
 .gallery {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
